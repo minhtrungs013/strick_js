@@ -1,0 +1,28 @@
+"""
+Input: A = ["pim", "pom"]
+B = ["9999912388888", "7778999"]
+C = "8999"
+Output: pom
+*** Ý tưởng: 
++ Lấy C so sánh từ của B xem nó bằng hay không 
+nếu bằng thì gán vị trí của B vào A và in ra màn hình
+*** Cách giải:
++ Tạo biến result
++ Dùng for in range lập qua từng phần tử của B
++ Tạo biến currrent và gán B vị trí thứ i vào biến
++ Dùng find kiểm tra biến Current.find(C) có lớn hơn 0 hay không (vì dùng find kiểm tra nếu dúng sẽ trả về index tìm thấy)
+"""
+
+def findPhone(A,B,C):
+    result = ""
+    for i in range(len(B)):
+        current = B[i]
+        if current.find(C) > 0:
+            result = A[i]
+    if result == "":
+        print("no contact")
+    print(result)
+A = ["pim", "pom"]
+B = ["9999912388888", "7778999"]
+C = "123"
+findPhone(A,B,C)
