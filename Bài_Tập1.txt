@@ -1,0 +1,16 @@
+Input: 23
+Output: 7
+*** Ý tưởng:
+Tính tổng các chữ số của một số đã cho, sau đó với mỗi chữ số thử tất cả các số
+từ 0 đến 9 xem nó có chia hết cho 3 hay không
+*** Cách giải:
++ Tạo 1 biến sum=0
++ Sử dụng for in range để chạy lấy ra index  của "23"
++ Gán sum bằng cái values của vị trí thứ i - 48.
++ Tạo một biến count = 0
++ Kiểm trả sum có chia hết cho 3 hay không nếu chia hết thì count +1
++ Sử dụng for in range để chạy lấy ra index của "23"
++ Tạo biên sum1 = sum - (values vị trí thứ i - 48)
++ Sử dụng tiếp for j in range(10) (chạy 10 lần)
++ Kiểm tra sum1 + j có chia hết cho 3 và j phải khác (values vị trí thứ i - 48)
++ Nếu mà điều kiện đúng thì count +1
