@@ -14,3 +14,20 @@ từ 0 đến 9 xem nó có chia hết cho 3 hay không
 + Sử dụng tiếp for j in range(10) (chạy 10 lần)
 + Kiểm tra sum1 + j có chia hết cho 3 và j phải khác (values vị trí thứ i - 48)
 + Nếu mà điều kiện đúng thì count +1
+
+***Code:
+def findCount(number):
+    sum = 0
+    for i in range(len(number)):
+        sum += int(number[i]) - 48
+    count = 0
+    if (sum % 3 == 0):
+        count += 1
+    for i in range(len(number)):
+        sum1 = sum - (int(number[i]) - 48)
+        for j in range(10):
+            if ((sum1 + j) % 3 == 0 and j != int(number[i]) - 48):
+                count += 1
+    print(count)
+number = "23"
+findCount(number)
